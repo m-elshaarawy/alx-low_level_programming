@@ -14,7 +14,7 @@ int main(void)
 	char ch = 0 + '0';
 	char al = 'a';
 
-	while (ch <= '10')
+	while (ch <= '9')
 	{
 		putchar(ch);
 		ch++;
