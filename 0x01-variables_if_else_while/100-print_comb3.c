@@ -11,7 +11,7 @@
 int main(void)
 {
 	int ch = 0 + '0';
-	int ch2 = 1+ '0';
+	int ch2 = 1 + '0';
 
 	while (ch <= '8')
 	{
