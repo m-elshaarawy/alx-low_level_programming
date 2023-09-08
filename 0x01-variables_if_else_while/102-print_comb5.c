@@ -29,6 +29,10 @@ int main(void)
 		{
 			putchar(',');
 			putchar(' ');
+			
+		}
+		else
+		{
 			break;
 		}
 		ch4++;
