@@ -11,7 +11,6 @@
 int main(void)
 {
 	int ch = 0 + '0';
-	int y = 0;
 
 	while (ch <= '9')
 	{
