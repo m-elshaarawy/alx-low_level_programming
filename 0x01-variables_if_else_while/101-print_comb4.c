@@ -30,7 +30,7 @@ int main(void)
 		if (ch3 == 58)
 		{
 			ch2++;
-			ch3 = ch + 1;
+			ch3 = ch2 + 1;
 			if (ch2 == '9')
 			{
 				ch++;
