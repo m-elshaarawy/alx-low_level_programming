@@ -12,31 +12,25 @@ int main(void)
 {
 	int ch = 0 + '0';
 	int ch2 = 1 + '0';
-	int ch3 = 2 + '0';
 
-	while (ch <= '7')
+	while (ch <= '8')
 	{
 
 		putchar(ch);
 		putchar(ch2);
-		putchar(ch3);
 
 		if (ch != '8')
 		{
 			putchar(',');
 			putchar(' ');
 		}
-		ch3++;
-		if (ch3 == 58)
+
+		ch2++;
+
+		if (ch2 == 58)
 		{
-			ch2++;
-			ch3 = ch + 1;
-			if (ch2 == '9')
-			{
-				ch++;
-				ch2 = ch + 1;
-				ch3 = ch2 + 1;
-			}
+			ch++;
+			ch2 = ch + 1;
 		}
 	}
 	putchar('\n');
