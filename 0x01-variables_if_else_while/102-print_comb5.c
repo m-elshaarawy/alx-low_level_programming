@@ -10,52 +10,29 @@
 
 int main(void)
 {
-	int ch = 0 + '0';
-	int ch2 = 0 + '0';
-	int ch3 = 0 + '0';
-	int ch4 = 0 + '1';
-	int i = 1;
+	int ch = 0, ch2;
 
-	while (i <= 100)
+	while (ch <= 99)
 	{
-
-		putchar(ch);
-		putchar(ch2);
-		putchar(' ');
-		putchar(ch3);
-		putchar(ch4);
-
-		if (ch2 != '8' && ch != '9')
+		ch2 = ch;
+		while (ch2 <= 99)
 		{
-			putchar(',');
-			putchar(' ');
-			
-		}
-		else
-		{
-			break;
-		}
-		ch4++;
-		if (ch4 == 58)
-		{
-			ch3++;
-			ch4 = 0 + '0';
-			if (ch3 == 58)
+			if (ch2 != ch)
 			{
-				ch2++;
-				ch4 = ch2 + '0';
-				ch3 = 0 + '0';
-				if (ch2 == 58)
+				putchar(((ch / 10) + '0'));
+				putchar(((ch % 10) + '0'));
+				putchar(' ');
+				putchar(((ch2 / 10) + '0'));
+				putchar(((ch2 % 10) + '0'));
+				if (ch != 98 && ch2 != 99)
 				{
-					ch++;
-					ch2 = 0 + '0';
-					ch4 = ch2 + '0';
-					ch3 = ch + '0';
-
+					putchar(',');
+					putchar(' ');
 				}
 			}
+			ch2++;
 		}
-		i++;
+		ch++;
 	}
 	putchar('\n');
 
