@@ -24,6 +24,6 @@ int main(void)
 		num2 = num3;
 
 	}
-	printf("%lu ", sum);
+	printf("%lu\n", sum);
 	return (0);
 }
