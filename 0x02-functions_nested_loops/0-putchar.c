@@ -1,15 +1,24 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
- *
- * Description: A C program that print alphabet
- *
- * Return: 0
- */
+* main - Entry point
+*
+* Description: a function that uses Write
+* to print chars
+*
+* Return: 0
+*/
 
 int main(void)
 {
-	printf("_putchar\n");
+	char str[] = "_putchar";
+
+	char i = 0;
+
+	for (i = 0; str[i]; i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
