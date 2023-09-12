@@ -16,7 +16,7 @@ int main(void)
 	{
 		num3 = num1 + num2;
 
-		printf("%d", num3);
+		printf("%ld", num3);
 		num1 = num2;
 		num2 = num3;
 		if (i != 49)
