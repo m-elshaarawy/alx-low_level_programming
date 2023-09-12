@@ -3,29 +3,18 @@
 /**
  * _isalpha - checks if c is alpha
  *
- * @c : number that we check
- * Return: 1 and prints + if n is greater than zero
- * Returns 0 and prints 0 if n is zero
- * Returns -1 and prints - if n is less than zero
+ * @c : the char that we check
+ * Return: 1 if c is lowercase 0 otherwise
 */
 
 int _isalpha(int c)
 {
-	if (c > 0)
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
-		_putchar('+');
 		return (1);
-	}
-	else if (c == 0)
-	{
-		_putchar('0');
-
-		return (0);
 	}
 	else
 	{
-		_putchar('-');
-
-		return (-1);
+		return (0);
 	}
 }
