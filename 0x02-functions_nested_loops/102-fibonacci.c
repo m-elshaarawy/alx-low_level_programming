@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	int num1 = 1, num2 = 2, num3 = 0, i = 0;
+	unsigned long num1 = 1, num2 = 2, num3 = 0, i = 0;
 
 	for (i = 0; i < 50; i++)
 	{
