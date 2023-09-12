@@ -11,7 +11,7 @@
 
 int main(void)
 {
-	char str[] = "_putchar";
+	char *str = "_putchar";
 
 	char i = 0;
 
