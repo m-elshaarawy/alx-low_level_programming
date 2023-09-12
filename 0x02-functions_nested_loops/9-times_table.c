@@ -14,23 +14,28 @@ void times_table(void)
 
 	while (i < 10)
 	{
-		for (j = 0; j < 10; j++)
+		_putchar('0');
+		for (j = 1; j < 10; j++)
 		{
-			t = i * j;
-			if (t > 9)
-			{
-				_putchar((t / 10) + '0');
-				_putchar((t % 10) + '0');
-			}
-			else
-			{
-				_putchar((t) + '0');
-			}
+
 			if (j != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
+			t = i * j;
+			if (t <= 9)
+			{
+				_putchar(' ');
+
+			}
+			else
+			{
+				_putchar((t / 10) + '0');
+
+			}
+			_putchar((t % 10) + '0');
+
 		}
 		_putchar('\n');
 		i++;
