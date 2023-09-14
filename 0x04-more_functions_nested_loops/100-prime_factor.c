@@ -6,7 +6,7 @@
 */
 
 double _squrt(double a)
- {
+{
 
 	double i = 0;
 	double j = a / 2;
