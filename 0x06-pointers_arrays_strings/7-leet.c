@@ -8,6 +8,7 @@
 
 char *leet(char *str)
 {
+	char *p = str;
 	char key[] = {'a', 'e', 'o', 't', 'l'};
 	int value[] = {4, 3, 0, 7, 1};
 	int size = sizeof(key) / sizeof(char);
@@ -24,5 +25,5 @@ char *leet(char *str)
 		}
 		str++;
 	}
-	return (str);
+	return (p);
 }
