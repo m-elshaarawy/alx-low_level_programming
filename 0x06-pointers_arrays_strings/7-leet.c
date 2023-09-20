@@ -9,7 +9,7 @@
 char *leet(char *str)
 {
 	char key[] = {'a', 'e', 'o', 't', 'l'};
-	char value[] = {4, 3, 0, 7, 1};
+	int value[] = {4, 3, 0, 7, 1};
 	int size = sizeof(key) / sizeof(char);
 	int i = 0;
 
