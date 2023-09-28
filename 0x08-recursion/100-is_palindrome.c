@@ -34,7 +34,7 @@ int Is_palindrome(char str[], int start, int end)
 
 	if (str[start] == str[end])
 	{
-		return (Is_Palindrome(str, start + 1, end - 1));
+		return (Is_palindrome(str, start + 1, end - 1));
 	}
 
 	return (0);
