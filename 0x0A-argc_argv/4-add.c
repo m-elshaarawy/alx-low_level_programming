@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 	int sum = 0;
 	char *c;
 
-	while (argc--)
+	while (--argc)
 	{
 		for (c = argv[argc]; *c; c++)
 		{
