@@ -19,7 +19,7 @@ int **alloc_grid(int width, int height)
 
 	for (i = 0; i < height ; i++)
 	{
-		graph[i] = calloc(sizeof(**graph), width);
+		graph[i] = calloc(sizeof(int), width);
 
 		if (graph[i] == 0)
 		{
