@@ -12,10 +12,10 @@ int **alloc_grid(int width, int height)
 {
 	int **graph, i = 0;
 
+	graph = malloc(sizeof(*graph) * height);
+
 	if (width <= 0 || height <= 0 || graph == 0)
 		return (NULL);
-
-	graph = malloc(sizeof(*graph) * height);
 
 	for (i = 0; i < height ; i++)
 	{
