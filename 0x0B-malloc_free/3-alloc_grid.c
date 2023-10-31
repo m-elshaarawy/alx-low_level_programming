@@ -27,6 +27,7 @@ int **alloc_grid(int width, int height)
 			{
 				free(graph[i]);
 			}
+			free(graph);
 			return (NULL);
 		}
 	}
