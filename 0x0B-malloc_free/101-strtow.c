@@ -16,7 +16,7 @@ char **strtow(char *str)
 	wc = wcount(str);
 	if (wc == 1)
 		return (NULL);
-	ws = (char **) malloc(wc * sizeof(char *))
+	ws = (char **) malloc(wc * sizeof(char *));
 	if (ws == NULL)
 		return (NULL);
 	ws[wc - 1] = NULL;
