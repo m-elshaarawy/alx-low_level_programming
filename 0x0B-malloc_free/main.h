@@ -22,6 +22,6 @@ char *argstostr(int ac, char **av);
 
 char **strtow(char *str);
 
-int wcount(char *str)
+int wcount(char *str);
 
 #endif /* MAIN_H */
