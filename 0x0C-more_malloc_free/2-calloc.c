@@ -15,13 +15,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	p = mallo(nmemb * sizeof(int));
+	p = mallo(nmemb * size);
 	t = p;
 
 	if (p == NULL)
 		return (NULL);
 
-	while ((nmemb * sizeof(int))--)
+	while ((nmemb * size)--)
 	{
 		*p++ = 0;
 	}
