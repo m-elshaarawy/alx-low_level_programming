@@ -9,18 +9,19 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p, *t;
+	char *p;
+	char *t;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	p = malloc(nmemb * size);
+	p = mallo(nmemb * sizeof(int));
 	t = p;
 
 	if (p == NULL)
 		return (NULL);
 
-	while ((nmemb * size)--)
+	while ((nmemb * sizeof(int))--)
 	{
 		*p++ = 0;
 	}
