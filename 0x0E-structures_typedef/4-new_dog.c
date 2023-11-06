@@ -1,16 +1,52 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 
 /**
- * new_dog - main function.
- * @name: The dog's name.
- * @age: The dog's age.
- * @owner: The dog owner's name.
+ * _strlen - main
  *
- * Description: This function creates a new dog.
+ * @str: var1
  *
- * Return: NULL if the function fails.
- */
+ * Return: 0
+*/
+
+int _strlen(const char *str)
+{
+	int length = 0;
+
+	while (*str++)
+		length++;
+	return (length);
+}
+
+/**
+ * _strcopy - main
+ *
+ * @src: var1
+ * @dest: var2
+ *
+ * Return: 2
+*/
+
+char *_strcopy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i]; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
+
+	return (dest);
+}
+
+/**
+ * new_dog - main
+ *
+ * @name: var1
+ * @age: var2
+ * @owner: var3
+ *
+ * Return: 0
+*/
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -20,90 +56,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	dog = (dog_t *) malloc(sizeof(dog_t));
-
-	if (!dog)
+	if (dog == NULL)
 		return (NULL);
 
-	dog->name = _strdup(name);
-
-	if (!dog->name)
+	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	if ((*dog).name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
 
-	dog->owner = _strdup(owner);
-
-	if (!dog->owner)
+	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	if ((*dog).owner == NULL)
 	{
 		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
 
+	dog->name = _strcopy(dog->name, name);
 	dog->age = age;
+	dog->owner = _strcopy(dog->owner, owner);
 
 	return (dog);
-}
-
-/**
- * *_strdup - main function.
- * @str: Pointer to the string to duplicate.
- *
- * Description: This function copy a string to a newly allocated
- * space in memory.
- *
- * Return: The pointer to the duplicated string.
- */
-
-char *_strdup(char *str)
-{
-	int size = 0;
-	char *p;
-
-	if (str == 0)
-	{
-		return (NULL);
-	}
-
-	while (str[size])
-	{
-		size++;
-	}
-
-	p = malloc(sizeof(char) * size + 1);
-
-	if (p == NULL)
-	{
-		return (NULL);
-	}
-
-	_strcpy(p, str);
-
-	return (p);
-}
-
-
-/**
- * *_strcpy - main function.
- * @src: The source.
- * @dest: The destination.
- *
- * Description: This function copies the string pointed to by src,
- * including the terminating null byte (\0), to the buffer pointed to by dest.
- *
- * Return: The pointer to dest.
- */
-
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; src[i]; i++)
-	{
-		dest[i] = src[i];
-	}
-	dest[i] = '\0';
-
-	return (dest);
 }
