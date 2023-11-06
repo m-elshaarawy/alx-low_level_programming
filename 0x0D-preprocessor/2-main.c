@@ -1,12 +1,14 @@
 #include <stdio.h>
 
 /**
- * main - prints file name .
- * Return: 0
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
  */
 
-void main(void)
+int main(void)
 {
 	printf("%s\n", __FILE__);
+
 	return (0);
 }
